@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <GridPane prefHeight="533.0" prefWidth="755.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.20001220703125" minWidth="10.0" prefWidth="150.6000244140625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="604.1999755859374" minWidth="10.0" prefWidth="604.1999755859374" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="139.60001220703126" minHeight="10.0" prefHeight="59.99999237060547" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="380.80000762939454" minHeight="10.0" prefHeight="380.80000762939454" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="61.60001220703123" minHeight="10.0" prefHeight="24.000036621093727" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="50.0" prefWidth="262.0" text="Property Tool" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" GridPane.columnSpan="2">
+               <font>
+                  <Font name="Century" size="39.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="170.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefWidth="200.0" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+            <Separator prefWidth="200.0" GridPane.valignment="BOTTOM" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Button fx:id="migrateBtn" minWidth="100.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 0;" text="Migrate Properties" GridPane.rowIndex="1" GridPane.valignment="TOP" onAction="#handleMigrateBtnClick">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="reportBtn" minWidth="100.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 0;" text="Report" GridPane.rowIndex="1" onAction="#handleReportBtnClick">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="238.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="drOverrideBtn" minWidth="100.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" style="-fx-background-radius: 0;" text="DR Override" GridPane.rowIndex="1" onAction="#handleDRBtnClick">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <font>
+                  <Font name="Arial Narrow Bold" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="142.0" />
+               </GridPane.margin>
+            </Button>
+			  <Pane fx:id="welcomePane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <GridPane fx:id="mpGrid" GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.20001220703125" minWidth="10.0" prefWidth="108.79998779296875" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="130.0000030517578" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.1999969482422" minWidth="10.0" prefWidth="131.19997558593747" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.4000244140625" minWidth="10.0" prefWidth="113.4000244140625" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Property file" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Output location" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox prefHeight="26.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Label text="Migrate To" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Button fx:id="startBtn" mnemonicParsing="false" prefHeight="26.0" prefWidth="117.0" text="Start Migration" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+                  <Pane fx:id="resultPane" prefHeight="50.0" prefWidth="400.0" GridPane.columnSpan="4" GridPane.rowIndex="4" />
+                  <TextField fx:id="fileLocation" maxWidth="290.0" minWidth="290.0" prefHeight="26.0" prefWidth="290.0" GridPane.columnIndex="1" GridPane.columnSpan="3">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField fx:id="outputLocation" maxWidth="290.0" minWidth="290.0" prefWidth="290.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</Pane>
